@@ -127,7 +127,9 @@ h1, h2, h3, h4, h5, h6 {
     --accent-color : #0071e3;
     --accent-color-alt: #2997ff;
     --body-bg: #000;
-    --bg-color : #151516;
+    /* --bg-color : #151516;
+    --bg-color-alt : #1f1d1e; */
+    --bg-color : #9810c2;
     --bg-color-alt : #1f1d1e;
 
     /*  Stacking context  */
@@ -137,6 +139,10 @@ h1, h2, h3, h4, h5, h6 {
 
     /*  Utils  */
     --header-height : 3rem;
+}
+html {
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -195,6 +201,14 @@ a:hover {
         max-width: 61.25rem;
     }
 }
+
+/*ELIMINAR*/
+.section-placeholder {
+    min-height: 100vh;
+}
+
+
+
 /* END Layout */
 /*   END BASE */
 
@@ -270,6 +284,8 @@ a:hover {
 }
 /*  END styles from DESTOCK  */
 
+
+
 /*  styles from MOVIL  */
 @media screen and (max-width : 734px) {
 
@@ -286,7 +302,8 @@ a:hover {
         top: var(--header-height);
         left: 0;
         padding: 0.25rem 2.5rem 1.5rem;
-        width: 100%;
+        width: 50%;
+        height: 100vh;
         border-bottom: var(--header-border);
         background-color: var(--bg-color-alt);
 
@@ -347,11 +364,13 @@ a:hover {
 
     .main-header .menu-button::before {
         left: 45%;
+
         transform: rotate(-40deg);
     }
     
     .main-header .menu-button::after {
         right: 45%;
+
         transform: rotate(40deg);
     }
 
