@@ -99,7 +99,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--display-font);
-    font-weight: var(--)var(--semi-bold-font);
+    font-weight: var(--semi-bold-font);
 }
 
 .display-font {
@@ -252,6 +252,90 @@ a:hover {
     color: var(--accent-color-alt);
     text-decoration: none;
 }
+
+/*MAIN*/
+.main {
+    width: 90%;
+    margin: auto;
+
+    /* background-color: #9810c222; */
+}
+
+/*  MENBRESIA*/
+.main-membresia {
+    padding: 3rem 0;
+    /* background-color: #0071e355; */
+}
+
+.main-membresia .title{
+    font-size: var(--small-title-size);
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.membresia-title .sub-title {
+    font-size: var(--bigger-body-size);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.membresia-title .description {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/*logo*/
+.logo {
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    width: 100%; /* Ajusta según tu necesidad */
+
+    position: absolute;
+    top: 8rem;
+    left: 0;
+
+    z-index: var(--z-negative)
+}
+
+.logo .fa-solid {
+    font-size: 8rem;
+    color: #1bfa21;
+}
+
+.logo i {
+    animation: slide 3s linear forwards; /* Usa forwards para que se quede en la posición final */
+}
+
+.logo i:nth-child(1) {
+    animation-delay: 0s;
+}
+.logo i:nth-child(2) {
+    font-size: 5rem;
+    align-content: center;
+    animation-delay: 0s; /* Ajusta el retraso para que se desplacen uno por uno */
+    rotate: 90deg;
+    transform: rotate(90deg);
+}
+.logo i:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); } /* Ajusta el punto final para que se detenga en la posición final */
+    100% { transform: translateX(0); }
+}
+
+/* #1BFA21 */
+/*  END MENBRESIA*/
+
+
 
 
 /*  styles from TABLETA  */
@@ -420,6 +504,9 @@ a:hover {
         right: 45%;
         transform: rotate(-40deg);
     }
+    /*  END MENU ACTIVE*/
+
+
 }
 /*  END styles from MOVIL  */
 
