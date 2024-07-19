@@ -123,14 +123,17 @@ h1, h2, h3, h4, h5, h6 {
 :root {
     /*  Color  */
     --text-color : #fff;
+    --text-color-h : #1bfa21;
     --text-color-alt: #a1a1a6;
+    --text-color-b: #000 ;
     --accent-color : #0071e3;
     --accent-color-alt: #2997ff;
     --body-bg: #000;
     /* --bg-color : #151516;
     --bg-color-alt : #1f1d1e; */
-    --bg-color : #9810c2;
+    --bg-color : #fff;
     --bg-color-alt : #1f1d1e;
+    --bg-color-b : #1bfa21;
 
     /*  Stacking context  */
     --z-negative: -1;
@@ -222,6 +225,8 @@ a:hover {
     top: 0;
     height: var(--header-height);
     z-index: var(--z-sticky);
+
+    color: var(--text-color-h);
     background-color: var(--bg-color-alt);
 }
 
@@ -233,19 +238,20 @@ a:hover {
 }
 
 .main-header .title {
-    color: var(--text-color);
+    color: var(--text-color-h);
     font-weight: var(--semi-bold-font);
     font-size: var(--normal-body-size);
     text-decoration: none;
 }
 
 .main-header .main-menu {
+    color: var(--text-color-h);
     list-style: none;
     font-size: var(--smaller-body-size);
 }
 
 .main-menu .link {
-    color: var(--text-color);
+    color: var(--text-color-h);
 }
 
 .main-menu .link:hover {
@@ -284,9 +290,12 @@ a:hover {
 }
 
 .membresia-title .description {
-    
+    padding-top: 3rem;
+
     display: flex;
     flex-direction: column;
+
+    font-size: var(--smaller-body-size);
 }
 
 /*logo*/
@@ -308,6 +317,7 @@ a:hover {
     color: #1bfa21;
 }
 
+/*  Animation  */
 .logo i {
     animation: slide 3s linear forwards; /* Usa forwards para que se quede en la posición final */
 }
@@ -316,9 +326,10 @@ a:hover {
     animation-delay: 0s;
 }
 .logo i:nth-child(2) {
+    animation-delay: 0s; /* Ajusta el retraso para que se desplacen uno por uno */
+
     font-size: 5rem;
     align-content: center;
-    animation-delay: 0s; /* Ajusta el retraso para que se desplacen uno por uno */
     rotate: 90deg;
     transform: rotate(90deg);
 }
@@ -331,7 +342,22 @@ a:hover {
     100% { transform: translateX(0); } /* Ajusta el punto final para que se detenga en la posición final */
     100% { transform: translateX(0); }
 }
+/*  END Animation  */
 
+.membresia-button {
+    padding: 1rem 0;
+}
+.membresia-button  .button {
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    color: var(--bg-color);
+    background-color: var(--bg-color-alt);
+}
+.membresia-button  .button:hover {
+    color: var(--text-color-b);
+    background-color: var(--bg-color-b);
+}
 /* #1BFA21 */
 /*  END MENBRESIA*/
 
@@ -442,7 +468,7 @@ a:hover {
         display: block;
         height: 1px;
         width: 0.75rem;
-        background-color: #fff;
+        background-color: var(--text-color-h);
         transition: transform 1000ms cubic-bezier(0.86, 0, 0.07, 1);
     }
 
